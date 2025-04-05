@@ -1,21 +1,3 @@
-package com.example.addon;
-
-import com.example.addon.commands.CommandExample;
-import com.example.addon.hud.HudExample;
-import com.example.addon.hud.MinjaeHud;
-import com.example.addon.modules.ModuleExample;
-import com.mojang.logging.LogUtils;
-import meteordevelopment.meteorclient.addons.GithubRepo;
-import meteordevelopment.meteorclient.addons.MeteorAddon;
-import meteordevelopment.meteorclient.commands.Commands;
-import meteordevelopment.meteorclient.systems.hud.Hud;
-import meteordevelopment.meteorclient.systems.hud.HudElementInfo;
-import com.example.addon.modules.NettyCrasherModule;
-import meteordevelopment.meteorclient.systems.hud.HudGroup;
-import meteordevelopment.meteorclient.systems.modules.Category;
-import meteordevelopment.meteorclient.systems.modules.Modules;
-import org.slf4j.Logger;
-
 public class AddonTemplate extends MeteorAddon {
     public static final Logger LOG = LogUtils.getLogger();
     public static final Category CATEGORY = new Category("Example");
@@ -27,13 +9,14 @@ public class AddonTemplate extends MeteorAddon {
 
         // Modules
         Modules.get().add(new ModuleExample());
+        Modules.get().add(new NettyCrasherModule()); // ✅ 추가 완료!
 
         // Commands
         Commands.add(new CommandExample());
 
         // HUDs
         Hud.get().register(HudExample.INFO);
-        Hud.get().register(MinjaeHud.INFO); // ✅ 여기에 같이 등록!
+        Hud.get().register(MinjaeHud.INFO); // ✅ HUD 등록도 OK!
     }
 
     @Override
