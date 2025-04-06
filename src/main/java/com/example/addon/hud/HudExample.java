@@ -10,20 +10,22 @@ public class HudExample extends HudElement {
     public static final HudElementInfo<HudExample> INFO = new HudElementInfo<>(
         AddonTemplate.HUD_GROUP,
         "hud-example",
-        "Displays example HUD.",
+        "Displays 'Minjae Sense' in top-left.",
         HudExample::new
     );
 
     public HudExample() {
         super(INFO);
+        this.setPos(5, 5); // 왼쪽 위 살짝 띄운 위치
     }
 
     @Override
     public void render(HudRenderer renderer) {
-        String text = "Example HUD";
+        String text = "Minjae Sense";
+
         setSize(renderer.textWidth(text, true), renderer.textHeight(true));
-        renderer.quad(x, y, getWidth(), getHeight(), Color.BLACK);
+
+        // 텍스트만 렌더링
         renderer.text(text, x, y, Color.CYAN, true);
     }
 }
-
