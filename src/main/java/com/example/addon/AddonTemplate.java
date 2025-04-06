@@ -32,7 +32,7 @@ public class AddonTemplate extends MeteorAddon {
         Commands.add(new CommandExample());
 
         // HUDs
-        Hud.get().register(MinjaeHud.INFO);
+        Hud.get().register(MinjaeHud.INFO); // ✅ 유일한 HUD 등록
     }
 
     @Override
