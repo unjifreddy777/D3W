@@ -7,8 +7,8 @@ import net.minecraft.network.packet.c2s.play.ClientKeepAliveC2SPacket;
 import static com.example.addon.AddonTemplate.CATEGORY;
 import static meteordevelopment.meteorclient.MeteorClient.mc;
 
-public class NettyCrasherModule extends Module {
-    public NettyCrasherModule() {
+public class TheMinjaeNettyCrasher extends Module {
+    public TheMinjaeNettyCrasher() {
         super(CATEGORY, "netty-crasher", "Sends invalid packets to cause lag or crash (test only!)");
     }
 
