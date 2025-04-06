@@ -11,7 +11,7 @@ public class HudExample extends HudElement {
         AddonTemplate.HUD_GROUP,
         "hud-example",
         "Displays 'Minjae Sense' in top-left.",
-        HudExample::new
+        MinjaeHud::new
     );
 
     public HudExample() {
