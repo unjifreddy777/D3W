@@ -9,8 +9,8 @@ import meteordevelopment.meteorclient.utils.render.color.Color;
 public class HudExample extends HudElement {
     public static final HudElementInfo<HudExample> INFO = new HudElementInfo<>(
         AddonTemplate.HUD_GROUP,
-        "minjaesense",
-        "Displays the MinjaeSense version.",
+        "hud-example",
+        "Displays example HUD.",
         HudExample::new
     );
 
@@ -20,9 +20,10 @@ public class HudExample extends HudElement {
 
     @Override
     public void render(HudRenderer renderer) {
-        String text = "MinjaeSense v0.0.1";
+        String text = "Example HUD";
         setSize(renderer.textWidth(text, true), renderer.textHeight(true));
         renderer.quad(x, y, getWidth(), getHeight(), Color.BLACK);
         renderer.text(text, x, y, Color.CYAN, true);
     }
 }
+
