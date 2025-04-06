@@ -3,7 +3,7 @@ package com.example.addon;
 import com.example.addon.commands.CommandExample;
 import com.example.addon.modules.ModuleExample;
 import com.example.addon.modules.NettyCrasherModule;
-import com.example.addon.hud.MinjaeHud;
+import com.example.addon.hud.HudExample;
 
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.systems.commands.Commands;
@@ -33,7 +33,7 @@ public class AddonTemplate extends MeteorAddon {
         Commands.add(new CommandExample());
 
         // HUDs
-        Hud.get().register(MinjaeHud.INFO); // ✅ HUD 등록
+        Hud.get().register(HudExample.INFO); // ✅ HUD 등록
     }
 
     @Override
