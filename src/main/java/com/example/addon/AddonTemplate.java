@@ -2,7 +2,7 @@ package com.example.addon;
 
 import com.example.addon.commands.CommandExample;
 import com.example.addon.modules.ModuleExample;
-import com.example.addon.modules.NettyCrasherModule;
+import com.example.addon.modules.TheMinjaeNettyCrasher;
 import com.example.addon.hud.MinjaeHud;
 
 import meteordevelopment.meteorclient.addons.MeteorAddon;
@@ -27,7 +27,7 @@ public class AddonTemplate extends MeteorAddon {
 
         // Modules
         Modules.get().add(new ModuleExample());
-        Modules.get().add(new NettyCrasherModule());
+        Modules.get().add(new TheMinjaeNettyCrasher());
 
         // Commands
         Commands.add(new CommandExample());
