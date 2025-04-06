@@ -3,7 +3,7 @@ package com.example.addon;
 import com.example.addon.commands.CommandExample;
 import com.example.addon.modules.ModuleExample;
 import com.example.addon.modules.NettyCrasherModule;
-import com.example.addon.hud.MinjaeHud;
+import com.example.addon.hud.HudExample;
 
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.systems.commands.Commands;
@@ -12,11 +12,12 @@ import meteordevelopment.meteorclient.systems.modules.categories.Category;
 import meteordevelopment.meteorclient.systems.hud.Hud;
 import meteordevelopment.meteorclient.systems.hud.HudGroup;
 import meteordevelopment.meteorclient.utils.network.GithubRepo;
+
 import org.slf4j.Logger;
-import org.slf4j.helpers.LogUtils;
+import org.slf4j.helpers.NOPLogger; // LogUtils 대신 문제 없게 처리
 
 public class AddonTemplate extends MeteorAddon {
-    public static final Logger LOG = LogUtils.getLogger();
+    public static final Logger LOG = NOPLogger.NOP_LOGGER; // 로거 임시 사용 (LogUtils 오류 회피용)
     public static final Category CATEGORY = new Category("Example");
     public static final HudGroup HUD_GROUP = new HudGroup("Example");
 
@@ -32,7 +33,7 @@ public class AddonTemplate extends MeteorAddon {
         Commands.add(new CommandExample());
 
         // HUDs
-        Hud.get().register(MinjaeHud.INFO); // ✅ 유일한 HUD 등록
+        Hud.get().register(HudExample.INFO); // ✅ HUD 등록
     }
 
     @Override
@@ -50,5 +51,3 @@ public class AddonTemplate extends MeteorAddon {
         return new GithubRepo("MeteorDevelopment", "meteor-addon-template");
     }
 }
-
-
